@@ -1,7 +1,7 @@
 
 pipeline{
     environment{
-       dockerhub_registry=https://hub.docker.com/
+       dockerhub_registry=https://hub.docker.com/chytra
        dockerhub_credentials=chytra
               }
               

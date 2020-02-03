@@ -2,7 +2,7 @@
 pipeline{
     environment{
        dockerhub_registry=https://hub.docker.com/chytra
-       dockerhub_credentials=chytra
+       dockerhub=chytra
               }
               
     //This is related to docker build
@@ -17,7 +17,7 @@ pipeline{
           
         Stage('Push the image'){
             Steps{
-                docker.withRegistry("$dockerhub_registry", "$dockerhub_credentials") {
+                docker.withRegistry("$dockerhub_registry", "$dockerhub") {
                 app.push("${env.BUILD_NUMBER}")
                 app.push("latest")
                }

@@ -1,8 +1,8 @@
 
 pipeline{
     environment{
-       dockerhub_registry=https://hub.docker.com/chytra
-       dockerhub=chytra
+       dockerhub_registry="https://hub.docker.com/chytra"
+       dockerhub='chytra'
               }
               
     //This is related to docker build
